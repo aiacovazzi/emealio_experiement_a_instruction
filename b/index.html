@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esperimento E-Mealio - Istruzioni</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #2196F3;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #4CAF50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-letter {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .bot-link {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        }
+
+        .bot-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .survey-link {
+            background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%);
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+        }
+
+        .survey-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #FFC107;
+        }
+
+        .message {
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            border: 1px solid #ffeaa7;
+            color: #000000;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #07b9ff;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #37474f 0%, #263238 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Esperimento E-Mealio</h1>
+            <p>Istruzioni per i Partecipanti</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <p>Benvenuto/a e grazie per la tua partecipazione a questo esperimento!</p>
+                <p>L'esperimento richiede che tu abbia installato Telegram sul tuo smartphone o PC.</p>
+                <p>Grazie al tuo contributo potremo valutare l'efficacia del chatbot E-Mealio, un assistente virtuale dedicato allo sviluppo di abitudini alimentari sostenibili, sia per la salute che per l'ambiente.</p>
+                <p>Ti invitiamo a seguire queste istruzioni con attenzione, al fine di produrre risultati di qualità.</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-letter">A</span>Consenso Informato</h2>
+                <p>Leggi e compila i modulo del consenso informato:</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-letter">B</span>Accesso al Bot</h2>
+                <p>Accedi tramite telegram al bot E-Mealio tramite il seguente link:</p>
+                <a href="https://t.me/emealio_phase_bot" class="bot-link" target="_blank">https://t.me/emealio_phase_bot</a>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-letter">C</span>Interazione con il Chatbot</h2>
+                <p>Interagisci liberamente con il chatbot, l'ideale sarebbe interagirci per almeno 10-15 minuti provando tutte le funzionalità al fine di vivere un'esperienza significativa.</p>
+                
+                <div class="warning">
+                    <strong>ATTENZIONE!</strong> durante la prima fase il bot ti assegnerà un codice numerico, il messaggio sarà simile al seguente:<br><br>
+                    <div class="message">
+                    🔔 IMPORTANTE: Il tuo numero identificativo è 0. Per favore, prendine nota in quanto ti servirà per il questionario successivo! 🔔    
+                    </div>
+                    Annotalo, ti servirà per la fase successiva.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2><span class="section-letter">D</span>Questionario Finale</h2>
+                <p>Una volta conclusa l'interazione, compila il questionario utente esprimendo con sincerità i tuoi giudizi:</p>
+                <a href="https://forms.gle/rUMy7LWizi8VeWpN7" class="survey-link" target="_blank">https://forms.gle/rUMy7LWizi8VeWpN7</a>
+
+                <div class="warning">
+                    <strong>📝 Importante:</strong> Il tuo ID utente corrisponde esattamente al numero fornito dal chatbot nello step C.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Un ringraziamento sincero da tutto il team di E-Mealio.</p>
+        </div>
+    </div>
+</body>
+</html>
