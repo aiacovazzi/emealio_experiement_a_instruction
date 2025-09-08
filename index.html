@@ -72,15 +72,6 @@
             border-left: 5px solid #2196F3;
         }
 
-        .intro p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-
-        .intro p:last-child {
-            margin-bottom: 0;
-        }
-
         .section {
             margin-bottom: 35px;
             background: #fafafa;
@@ -197,7 +188,7 @@
         }
 
         .warning {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+            background: linear-gradient(135deg, #fff3cd 0%, #eed7c0 100%);
             border: 1px solid #ffeaa7;
             color: #856404;
             padding: 20px;
@@ -206,20 +197,14 @@
             border-left: 5px solid #FFC107;
         }
 
-        .warning strong {
-            color: #b8860b;
-        }
-
-        .profile-info {
-            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+        .message {
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            border: 1px solid #ffeaa7;
+            color: #000000;
             padding: 20px;
             border-radius: 12px;
-            margin: 15px 0;
-            border-left: 5px solid #4CAF50;
-        }
-
-        .profile-info strong {
-            color: #2e7d32;
+            margin: 20px 0;
+            border-left: 5px solid #07b9ff;
         }
 
         .footer {
@@ -227,21 +212,6 @@
             color: white;
             padding: 30px;
             text-align: center;
-        }
-
-        .footer h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .code-highlight {
-            background: #f5f5f5;
-            padding: 5px 10px;
-            border-radius: 6px;
-            font-family: 'Courier New', monospace;
-            border: 1px solid #ddd;
-            display: inline-block;
-            margin: 5px;
         }
 
         @media (max-width: 768px) {
@@ -274,7 +244,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🍃 Esperimento E-Mealio</h1>
+            <h1>Esperimento E-Mealio</h1>
+            <p>Istruzioni per i Partecipanti</p>
         </div>
 
         <div class="content">
@@ -287,84 +258,69 @@
 
             <div class="section">
                 <h2><span class="section-letter">A</span>Consenso Informato</h2>
-                <p>Leggi e compila il modulo del consenso informato prima di procedere.</p>
+                <p>Leggi e compila il modulo del consenso informato:</p>
             </div>
 
             <div class="section">
                 <h2><span class="section-letter">B</span>Accesso al Bot</h2>
-                <p>Accedi tramite Telegram al bot E-Mealio tramite il seguente link:</p>
-                <a href="https://t.me/emealio_phase_bot" class="bot-link" target="_blank">🤖 Apri E-Mealio Bot</a>
+                <p>Accedi tramite telegram al bot E-Mealio tramite il seguente link:</p>
+                <a href="https://t.me/emealio_phase_bot" class="bot-link" target="_blank">https://t.me/emealio_phase_bot</a>
                 
                 <div class="warning">
-                    <strong>⚠️ ATTENZIONE!</strong> Durante la prima fase il bot ti assegnerà un codice numerico. <strong>Annotalo</strong>, ti servirà per la fase successiva.
+                    <strong>ATTENZIONE!</strong> durante la prima fase il bot ti assegnerà un codice numerico, il messaggio sarà simile al seguente:<br><br>
+                    <div class="message">
+                    🔔 IMPORTANTE: Il tuo numero identificativo è 0. Per favore, prendine nota in quanto ti servirà per il questionario successivo! 🔔    
+                    </div>
+                    Annotalo, ti servirà per la fase successiva.
                 </div>
             </div>
 
             <div class="section">
                 <h2><span class="section-letter">C</span>Interazione con il Chatbot</h2>
-                <p>Segui attentamente questi passaggi nell'ordine indicato:</p>
+                <p>Interagisci con il chatbot seguendo queste istruzioni:</p>
                 
                 <ol class="steps">
-                    <li>Premi su <span class="code-highlight">Avvia</span> oppure digita <span class="code-highlight">/start</span> per iniziare la conversazione.</li>
+                    <li>Premi su "Avvia " oppure digita /start per iniziare la conversazione.</li>
                     
-                    <li>Specifica al bot che desideri continuare ad interagire in <strong>italiano</strong>.</li>
+                    <li>Specifica al bot che desideri continuare ad interagire in italiano.</li>
                     
-                    <li>A questo punto il bot ti chiederà le informazioni personali per la registrazione. Usa questi dati:
-                        <div class="profile-info">
-                            <strong>Nome:</strong> Mario Rossi<br>
-                            <strong>Paese:</strong> Italia<br>
-                            <strong>Data di nascita:</strong> 1/1/2000<br>
-                            <strong>Allergie:</strong> Arachidi<br>
-                            <strong>Dieta:</strong> Vegetariano<br>
-                            <strong>Non graditi:</strong> Funghi
-                        </div>
-                    </li>
+                    <li>A questo punto il bot ti chiederà le informazioni personali per la registrazione. Indica di chiamarti Mario Rossi, di vivere in Italia, di essere nato il 1/1/2000, di essere allergico alle arachidi, di essere vegetariano e che non ti piacciono i funghi.</li>
                     
-                    <li>Comunica al bot di voler <strong>accettare il promemoria</strong> con le impostazioni predefinite.</li>
+                    <li>Leggi con attenzione il messsaggio annotando l'id fornito dal bot. Dunque comunica al bot di non voler accettare il promemoria con le impostazioni predefinite.</li>
                     
-                    <li>Dopo aver completato la registrazione, clicca sul pulsante <span class="code-highlight">Suggerimento Ricetta</span> e attendi una risposta.</li>
+                    <li>Dopo aver completato la registrazione, il bot ti mostrerà un menu interattivo con pulsanti. Clicca sul pulsante "Suggerimento Ricetta" e attendi una risposta da parte del bot.</li>
                     
-                    <li>Il bot ti chiederà alcune preferenze. Indica:
-                        <div class="profile-info">
-                            <strong>Pasto:</strong> Pranzo<br>
-                            <strong>Ingrediente desiderato:</strong> Patate<br>
-                            <strong>Ingrediente da evitare:</strong> Cipolle
-                        </div>
-                    </li>
+                    <li>Il bot ti illustrerà la funzionalità e ti chiederà di esprimere alcune preferenze riguardo il suggerimento della ricetta. Indica che desideri una ricetta per pranzo, che contenga patate e che non includa cipolle.</li>
                     
-                    <li>Dopo che il bot ti avrà presentato il suggerimento, <strong>richiedi la lista degli ingredienti</strong> della ricetta proposta.</li>
+                    <li>Dopo che il bot ti avrà presentato il suggerimento di ricetta, richiedi la lista degli ingredienti della ricetta proposta.</li>
                     
-                    <li>Se il suggerimento non rispetta i parametri richiesti, chiedi un'altra ricetta. Altrimenti, accetta la ricetta suggerita. <em>(Massimo 3 tentativi, poi rifiuta esplicitamente)</em></li>
+                    <li>Se secondo te il suggerimento di ricetta proposto non rispetta i parametri richiesti, chiedi al bot di suggerirti un'altra ricetta, altrimenti specifica al bot che desideri accettare la ricetta suggerita. In caso di suggerimento non soddisfacente, ripeti questo step al massimo per 3 volte. Se entro il terzo tentativo non hai trovato una ricetta adatta, comunica esplicitamente al bot che desideri rifiutare il suggerimento.</li>
                     
-                    <li>Clicca sul pulsante <span class="code-highlight">Miglioramento Ricetta</span> e attendi una risposta.</li>
+                    <li>Il bot ti riporterà automaticamente al menu principale. Clicca ora sul pulsante "Miglioramento Ricetta" e attendi una risposta da parte del bot.</li>
                     
-                    <li>Indica di voler migliorare la sostenibilità della ricetta con questi ingredienti:
-                        <div class="profile-info">
-                            <strong>Ingredienti:</strong> patatine fritte, formaggio cheddar, salsa gravy, burro, farina
-                        </div>
-                    </li>
+                    <li>Il bot ti illustrerà la funzionalità e ti chiederà di esprimere il nome della ricetta, oppure la lista degli ingredienti che la compongono, che desideri migliorare. Indica di voler migliorare la sostenibilità della ricetta composta dagli ingredienti : "patatine fritte, formaggio cheddar, salsa gravy, burro, farina".</li>
                     
-                    <li>Dopo la versione migliorata, <strong>richiedi la lista degli ingredienti</strong> della nuova versione.</li>
+                    <li>Dopo che il bot ti avrà presentato la versione migliorata della ricetta, richiedi la lista degli ingredienti della nuova versione della ricetta.</li>
                     
-                    <li>Valuta il miglioramento e accetta o richiedi modifiche. <em>(Massimo 3 tentativi, poi rifiuta esplicitamente)</em></li>
+                    <li>Se secondo te la versione migliorata della ricetta non rispetta i parametri richiesti, chiedi al bot di suggerirti un altro miglioramento di ricetta, altrimenti specifica al bot che desideri accettare la versione migliorata della ricetta. In caso di miglioramento non soddisfacente, ripeti questo step al massimo per 3 volte. Se entro il terzo tentativo non hai trovato una ricetta adatta, comunica esplicitamente al bot che desideri rifiutare il suggerimento.</li>
                     
-                    <li>Clicca sul pulsante <span class="code-highlight">Esperto Alimentare</span> e attendi una risposta.</li>
+                    <li>Il bot ti riporterà automaticamente al menu principale. Clicca ora sul pulsante "Esperto Alimentare" e attendi una risposta da parte del bot.</li>
                     
-                    <li>Chiedi di spiegarti la <strong>sostenibilità della ricetta "Carbonara"</strong>.</li>
+                    <li>Il bot ti illustrerà che tipo di informazioni puoi richiedere all'esperto alimentare. Chiedi di spiegarti la sostenibilità della ricetta : "Carbonara".</li>
                     
-                    <li>Richiedi di spiegarti la sostenibilità dell'ingrediente <strong>"lenticchie"</strong> e di compararla con quella dell'ingrediente <strong>"fagioli"</strong>.</li>
+                    <li>Dopo che il bot ti avrà presentato la sostenibilità della Carbonara, richiedi di spiegarti la sostenibilità dell'ingrediente : "lenticchie" e di compararla con quella dell'ingrediente "fagioli".</li>
                     
-                    <li>Chiedi informazioni sulla <strong>salubrità della ricetta "Pizza Margherita"</strong>.</li>
+                    <li>Adesso chiedi informazioni sulla salubrità della ricetta "Pizza Margherita".</li>
                     
-                    <li>Richiedi di spiegarti la salubrità dell'ingrediente <strong>"Pasta"</strong> e di compararla con quella dell'ingrediente <strong>"Riso"</strong>.</li>
+                    <li>Dopo che il bot ti avrà presentato la sostenibilità della Pizza Margherita, richiedi di spiegarti la salubrità dell'ingrediente : "Pasta" e di compararla con quella dell'ingrediente "Riso".</li>
                 </ol>
             </div>
 
             <div class="section">
                 <h2><span class="section-letter">D</span>Questionario Finale</h2>
                 <p>Una volta conclusa l'interazione, compila il questionario utente esprimendo con sincerità i tuoi giudizi:</p>
-                <a href="https://forms.gle/rUMy7LWizi8VeWpN7" class="survey-link" target="_blank">📋 Compila il Questionario</a>
-                
+                <a href="https://forms.gle/rUMy7LWizi8VeWpN7" class="survey-link" target="_blank">https://forms.gle/rUMy7LWizi8VeWpN7</a>
+
                 <div class="warning">
                     <strong>📝 Importante:</strong> Il tuo ID utente corrisponde esattamente al numero fornito dal chatbot nello step C.
                 </div>
@@ -372,8 +328,7 @@
         </div>
 
         <div class="footer">
-            <h3>🙏 Grazie per la partecipazione!</h3>
-            <p>Un ringraziamento sincero da tutto il team di E-Mealio</p>
+            <p>Un ringraziamento sincero da tutto il team di E-Mealio.</p>
         </div>
     </div>
 </body>
