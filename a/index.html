@@ -158,12 +158,19 @@
             font-weight: bold;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+
             /* Responsive improvements */
             width: 100%;
             max-width: 300px; /* Prevents it from getting too wide */
             text-align: center;
             box-sizing: border-box;
-            font-size: 16px; /* Base font size */
+            font-size: 14px; /* Base font size */
+
+            /* Text overflow prevention */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0; /* Allows flex item to shrink below content size */
         }
 
         .bot-link:hover {
@@ -184,20 +191,28 @@
             font-weight: bold;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+
             /* Responsive improvements */
             width: 100%;
             max-width: 300px; /* Prevents it from getting too wide */
             text-align: center;
             box-sizing: border-box;
-            font-size: 16px; /* Base font size */
+            font-size: 14px; /* Base font size */
+
+            /* Text overflow prevention */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0; /* Allows flex item to shrink below content size */
         }
-        
+
         .survey-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
             color: white;
             text-decoration: none;
         }
+        
 
         .warning {
             background: linear-gradient(135deg, #fff3cd 0%, #eed7c0 100%);
